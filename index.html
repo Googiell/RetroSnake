@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title> RetroSnake by Googiell </title>
+	<link href="https://fonts.googleapis.com/css?family=Monda:700" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div class="wrap">
+	<div class="options-wrap">
+		<button class="start-btn"> Start </button>
+		<form class="options">
+			<label> Level:
+				<select class="level">
+					<option>
+						Easy
+					</option>
+					<option>
+						Medium
+					</option>
+					<option>
+						Hard
+					</option>
+				</select>
+			</label>
+		</form>
+	</div>
+	<div class="score-wrap">
+			<p> Score: <span class="score"></span></p>
+	</div>
+	</div>
+	<canvas width="500" height="500"></canvas>
+	<script src="scripts/main.js"></script>
+</body>
+
+</html>
