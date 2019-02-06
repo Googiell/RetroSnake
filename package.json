@@ -1,0 +1,29 @@
+{
+  "name": "retro_snake",
+  "version": "1.0.0",
+  "description": "Just a snake game in retro style!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wglugla/RetroSnake.git"
+  },
+  "keywords": [
+    "retro",
+    "snake",
+    "game",
+    "javascript"
+  ],
+  "author": "wglugla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wglugla/RetroSnake/issues"
+  },
+  "homepage": "https://github.com/wglugla/RetroSnake#readme",
+  "devDependencies": {
+    "webpack": "^4.29.2",
+    "webpack-cli": "^3.2.3"
+  }
+}
