@@ -31,7 +31,6 @@ const moveSnake = () => {
 }
 
 const changeDirection = (dir) => {
-   console.log(direction - dir);
    if ((direction - dir) % 2) {
       direction = dir;
    }
