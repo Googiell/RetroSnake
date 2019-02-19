@@ -1,8 +1,8 @@
 module.exports = {
    entry: './src/js/game.js',
    output: {
+      filename: 'bundle.js',
       path: `${__dirname}/dist/js`,
-      filename: 'bundle.js'
    },
    watch: true,
    mode: "development", //ta opcja zostanie pominięta jeżeli użyjemy npm run build
@@ -17,7 +17,7 @@ module.exports = {
                presets: [
                   ["env", {
                      targets: {
-                        browsers: ['> 1%', 'last 2 versions']
+                        browsers: ['> 1%']
                      }
                   }]
                ]

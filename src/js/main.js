@@ -1,4 +1,4 @@
-var Snake = (function() {
+var Snake = (function () {
 	// canvas variables
 	const canvas = document.querySelector('canvas');
 	const ctx = canvas.getContext('2d');
@@ -117,8 +117,7 @@ var Snake = (function() {
 			pos_x = 0;
 		} else if (pos_x * snake_size < 0) {
 			pos_x = 24;
-		} else {
-		}
+		} else {}
 		if (pos_y * snake_size >= canvas_size) {
 			pos_y = 0;
 		} else if (pos_y * snake_size < 0) {
@@ -174,14 +173,14 @@ var Snake = (function() {
 	createFood();
 	score.textContent = '000';
 
-	document.addEventListener('keydown', function() {
+	document.addEventListener('keydown', function () {
 		move(window.event.keyCode);
 	});
 
 	drawGame();
 
 	var start_btn = document.querySelector('.menu__start');
-	start_btn.addEventListener('click', function() {
+	start_btn.addEventListener('click', function () {
 		options_wrap.style.display = 'none';
 		score_wrap.style.display = 'block';
 		const level = document.querySelector('.menu__level').selectedIndex;
@@ -204,7 +203,7 @@ var Snake = (function() {
 		draw_snakegame = setInterval(drawGame, interval);
 	});
 
-	var _init = function() {
+	var _init = function () {
 		drawGame();
 	};
 
