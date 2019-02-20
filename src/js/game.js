@@ -99,11 +99,12 @@ document.addEventListener(
    'keydown',
    debounce((e) => {
       changeDirection(findNewDirection(e.key));
-   }, speed - (speed / 3))
+   }, speed - 20)
 );
 
 export {
    canvas,
    ctx,
-   stopGame
+   stopGame,
+   drawFood
 };
