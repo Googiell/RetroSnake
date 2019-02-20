@@ -1,4 +1,6 @@
-import _ from 'lodash';
+import {
+   debounce
+} from 'lodash';
 
 import {
    createSnake,
@@ -63,7 +65,6 @@ startButton.addEventListener('click', () => {
 });
 
 const stopGame = () => {
-   console.log('stop game');
    clearInterval(gameInterval);
 }
 
@@ -96,7 +97,7 @@ const findNewDirection = (key) => {
 
 document.addEventListener(
    'keydown',
-   _.debounce((e) => {
+   debounce((e) => {
       changeDirection(findNewDirection(e.key));
    }, speed - (speed / 3))
 );
