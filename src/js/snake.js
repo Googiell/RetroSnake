@@ -1,6 +1,4 @@
-import {
-   isEqual
-} from 'lodash';
+import _isEqual from 'lodash/isEqual';
 
 import {
    stopGame,
@@ -48,7 +46,7 @@ const changeDirection = (dir) => {
 const checkColision = () => {
    let snakeTail = snakeBody.slice();
    snakeTail.shift();
-   if (snakeTail.some((el) => isEqual(el, snakeBody[0]))) {
+   if (snakeTail.some((el) => _isEqual(el, snakeBody[0]))) {
       stopGame();
    }
 };

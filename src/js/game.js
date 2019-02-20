@@ -1,6 +1,4 @@
-import {
-   debounce
-} from 'lodash';
+import _debounce from 'lodash/debounce';
 
 import {
    createSnake,
@@ -101,7 +99,7 @@ const findNewDirection = (key) => {
 
 document.addEventListener(
    'keydown',
-   debounce((e) => {
+   _debounce((e) => {
       changeDirection(findNewDirection(e.key));
    }, speed - 20)
 );

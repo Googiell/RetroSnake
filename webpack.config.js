@@ -1,3 +1,5 @@
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+
 module.exports = {
    entry: './src/js/game.js',
    output: {
@@ -5,8 +7,12 @@ module.exports = {
       path: `${__dirname}/dist/js`,
    },
    watch: true,
-   mode: "development", //ta opcja zostanie pominięta jeżeli użyjemy npm run build
+   mode: 'production',
    devtool: "source-map",
+   plugins: [
+      new BundleAnalyzerPlugin()
+
+   ],
    module: {
       rules: [{
          test: /\.js$/,

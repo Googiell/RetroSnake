@@ -1,6 +1,4 @@
-import {
-   isEqual
-} from 'lodash';
+import _isEqual from 'lodash/isEqual';
 
 import {
    snakeBody
@@ -13,7 +11,7 @@ let food = {
 
 const checkFailFood = food => {
    for (let part of snakeBody) {
-      if (isEqual(part, food)) {
+      if (_isEqual(part, food)) {
          return true;
       }
    }
