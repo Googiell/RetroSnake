@@ -9,32 +9,11 @@
 </head>
 
 <body>
-	<main>
-		<div class="container">
-			<div class="menu">
-				<button class="menu__start"> Start </button>
-				<form class="menu__options">
-					<label> Level:
-						<select class="menu__level">
-							<option>
-								Easy
-							</option>
-							<option>
-								Medium
-							</option>
-							<option>
-								Hard
-							</option>
-						</select>
-					</label>
-				</form>
-			</div>
-			<div class="menu__scoreWrap">
-				<p class="menu__scoreParagraph"> Score: <span class="menu__score"></span></p>
-			</div>
-		</div>
-		<canvas width="500" height="500"></canvas>
-	</main>
+	<div class="container">
+		<h1 class="container__title"> Retro snake </h1>
+		<button class="container__startButton"> Start game </button>
+	</div>
+	<canvas width="500" height="500"></canvas>
 	<script src="dist/js/bundle.js"></script>
 
 </body>

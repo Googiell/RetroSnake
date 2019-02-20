@@ -14,7 +14,8 @@ import {
    createFood
 } from './food';
 
-const startButton = document.querySelector('.menu__start');
+const container = document.querySelector('.container');
+const startButton = document.querySelector('.container__startButton');
 const speed = 100;
 
 const canvas = document.querySelector('canvas');
@@ -22,17 +23,18 @@ const ctx = canvas.getContext('2d');
 ctx.scale(20, 20);
 
 const drawGame = () => {
-   ctx.fillStyle = '#668041';
+   ctx.fillStyle = '#B3BD00';
    ctx.fillRect(0, 0, 25, 25);
+   ctx.setLineDash([1]);
+   ctx.strokeStyle = '#68500D';
+   ctx.strokeRect(0, 0, 25, 25);
 };
 
 const drawFood = ({
    x,
    y
 }) => {
-   ctx.fillStyle = '#1d1b1b';
-   ctx.fillRect(x, y, 1, 1);
-   ctx.strokeStyle = '#668051';
+   ctx.fillStyle = '#68500D';
    ctx.fillRect(x, y, 1, 1);
 };
 
@@ -40,7 +42,7 @@ const drawPart = ({
    x,
    y
 }) => {
-   ctx.fillStyle = '#000000';
+   ctx.fillStyle = '#68500D';
    ctx.fillRect(x, y, 1, 1);
 };
 
@@ -58,6 +60,7 @@ const runGame = () => {
 let gameInterval;
 
 startButton.addEventListener('click', () => {
+   container.classList.add('container--hidden');
    clearInterval(gameInterval);
    clearSnake();
    createSnake();
@@ -66,6 +69,7 @@ startButton.addEventListener('click', () => {
 
 const stopGame = () => {
    clearInterval(gameInterval);
+   container.classList.remove('container--hidden');
 }
 
 /*
