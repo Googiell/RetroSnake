@@ -1,3 +1,9 @@
+import _ from 'lodash';
+
+import {
+   stopGame
+} from './game';
+
 let snakeBody = [];
 let snakeLength = 10;
 let direction = 0;
@@ -28,6 +34,7 @@ const moveSnake = () => {
    }
    snakeBody.unshift(tail);
    snakeBody.pop();
+   checkColision();
 }
 
 const changeDirection = (dir) => {
@@ -36,9 +43,24 @@ const changeDirection = (dir) => {
    }
 }
 
+const checkColision = () => {
+   let snakeTail = snakeBody.slice();
+   snakeTail.shift();
+   if (snakeTail.some(el => _.isEqual(el, snakeBody[0]))) {
+      stopGame();
+   }
+};
+
+const clearSnake = () => {
+   snakeBody = [];
+   snakeLength = 10;
+   direction = 0;
+}
+
 export {
    createSnake,
    snakeBody,
    moveSnake,
-   changeDirection
+   changeDirection,
+   clearSnake
 };

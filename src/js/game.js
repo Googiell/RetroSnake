@@ -2,6 +2,7 @@ import _ from 'lodash';
 
 import {
    createSnake,
+   clearSnake,
    snakeBody,
    moveSnake,
    changeDirection
@@ -52,10 +53,19 @@ const runGame = () => {
    }
 };
 
+let gameInterval;
+
 startButton.addEventListener('click', () => {
+   clearInterval(gameInterval);
+   clearSnake();
    createSnake();
-   setInterval(runGame, speed);
+   gameInterval = setInterval(runGame, speed);
 });
+
+const stopGame = () => {
+   console.log('stop game');
+   clearInterval(gameInterval);
+}
 
 /*
    0 - right
@@ -93,5 +103,6 @@ document.addEventListener(
 
 export {
    canvas,
-   ctx
+   ctx,
+   stopGame
 };
